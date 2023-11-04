@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import MobileMenu from "./MobileMenu";
+import MobileHeader from "./mobileMenu/MobilHeader";
 
 const Header = () => {
   return (
     <Head className="container">
-      <MobileMenu />
+      <MobileHeader />
     </Head>
   );
 };

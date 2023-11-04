@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import Logo from "../../shared/Logo";
+import Logo from "../../../shared/Logo";
+import { fonts } from "../../../utils/theme";
+import BtnOpenMenu from "./BtnOpenMenu";
 
-const MobileMenu = () => {
+const MobileHeader = () => {
   return (
     <Wrapper>
-      <button>Open</button>
+      <BtnOpenMenu />
       <WrapperTittle>
         <Logo />
         <Tittle>Samwayle</Tittle>
@@ -13,12 +15,13 @@ const MobileMenu = () => {
   );
 };
 
-export default MobileMenu;
+export default MobileHeader;
 
 const Wrapper = styled.div`
   display: flex;
   padding: 30px 0;
   gap: 40px;
+  align-items: baseline;
 `;
 
 const WrapperTittle = styled.div`
@@ -28,9 +31,7 @@ const WrapperTittle = styled.div`
 `;
 
 const Tittle = styled.h1`
-  font-family: Cedarville Cursive;
+  font-family: ${fonts.cedarville.fontFamily};
   font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: ${fonts.cedarville.fontWeight};
 `;
