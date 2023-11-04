@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme, fonts } from "../../../utils/theme";
+import SocIcons from "../../../shared/SocIcons";
 
 const dataMenuLink = ["Home", "About us", "Promotion", "Shop", "Contacts"];
 
@@ -10,10 +11,12 @@ const MobileMenu = ({ children }) => {
       <List>
         {dataMenuLink.map((item) => (
           <Item key={item}>
-            <Link>{item}</Link>
+            <Link href="#">{item}</Link>
           </Item>
         ))}
       </List>
+      <SocIcons />
+      <DarkLine></DarkLine>
     </Wrapper>
   );
 };
@@ -22,7 +25,7 @@ export default MobileMenu;
 
 const Wrapper = styled.div`
   display: flex;
-  padding: 0 18px 28px 18px;
+  padding: 0 18px 0 18px;
   flex-direction: column;
   position: absolute;
   top: 0;
@@ -44,9 +47,24 @@ const List = styled.ul`
 `;
 const Item = styled.li`
   display: flex;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 const Link = styled.a`
+  text-decoration: none;
+  color: ${theme.color.black};
   font-family: ${fonts.josefin.fontFamily};
   font-size: 36px;
   font-weight: 500;
+`;
+
+const DarkLine = styled.div`
+  width: 134px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: ${theme.color.black};
+  margin: 0 auto;
 `;

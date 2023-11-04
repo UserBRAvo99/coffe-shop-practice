@@ -11,6 +11,7 @@ const Btn = styled.button`
   padding: 0;
   border: transparent;
   background-color: transparent;
+  cursor: pointer;
   svg {
     width: 32px;
     height: 26px;
