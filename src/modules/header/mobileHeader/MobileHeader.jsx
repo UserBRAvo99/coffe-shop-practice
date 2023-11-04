@@ -1,12 +1,15 @@
+import { useContext } from "react";
+import { ShopContext } from "../../../context/ShopProvider";
 import styled from "styled-components";
 import Logo from "../../../shared/Logo";
 import { fonts } from "../../../utils/theme";
 import BtnOpenMenu from "./BtnOpenMenu";
 
 const MobileHeader = () => {
+  const { eventW } = useContext(ShopContext);
   return (
     <Wrapper>
-      <BtnOpenMenu />
+      <BtnOpenMenu eventW={eventW} />
       <WrapperTittle>
         <Logo />
         <Tittle>Samwayle</Tittle>
@@ -28,6 +31,10 @@ const WrapperTittle = styled.div`
   display: flex;
   align-items: baseline;
   gap: 10px;
+  & svg {
+    width: 45px;
+    height: 28px;
+  }
 `;
 
 const Tittle = styled.h1`

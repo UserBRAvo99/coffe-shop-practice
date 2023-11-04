@@ -1,5 +1,11 @@
-import { render } from 'preact'
-import { App } from './app.jsx'
-import './index.css'
+import { render } from "preact";
+import { ShopProvider } from "./context/ShopProvider.jsx";
+import { App } from "./app.jsx";
+import "./index.css";
 
-render(<App />, document.getElementById('app'))
+render(
+  <ShopProvider>
+    <App />
+  </ShopProvider>,
+  document.getElementById("app")
+);

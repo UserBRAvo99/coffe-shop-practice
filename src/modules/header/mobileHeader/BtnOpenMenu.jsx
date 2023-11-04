@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { AiOutlineMenu } from "react-icons/ai";
 
-const BtnOpenMenu = () => {
+const BtnOpenMenu = ({ eventW }) => {
   return (
-    <Btn>
+    <Btn onClick={eventW}>
       <AiOutlineMenu />
       {/* <svg
         xmlns="http://www.w3.org/2000/svg"
