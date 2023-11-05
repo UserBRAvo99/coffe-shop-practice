@@ -15,5 +15,10 @@ export const fonts = {
   },
   josefin: {
     fontFamily: "Josefin Sans",
+    fontWeight: 700,
+  },
+  alegreya: {
+    fontFamily: "Alegreya Sans",
+    fontWeight: 400,
   },
 };
