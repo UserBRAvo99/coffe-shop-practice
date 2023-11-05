@@ -7,21 +7,21 @@ const SocIcons = () => {
   return (
     <Wrapper>
       <List>
-        <li>
+        <Item>
           <Link href="#">
             <AiFillInstagram />
           </Link>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <Link href="#">
             <FaFacebookF />
           </Link>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <Link href="#">
             <AiOutlineTwitter />
           </Link>
-        </li>
+        </Item>
       </List>
     </Wrapper>
   );
